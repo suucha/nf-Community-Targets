@@ -6,6 +6,7 @@
         "ChibiOS/GHI_FEZ_CERBERUS_NF/CMakePresets.json",
         "ChibiOS/I2M_ELECTRON_NF/CMakePresets.json",
         "ChibiOS/I2M_OXYGEN_NF/CMakePresets.json",
+        "ChibiOS/M144Z_M4/CMakePresets.json",
         "ChibiOS/MBN_QUAIL/CMakePresets.json",
         "ChibiOS/NESHTEC_NESHNODE_V1/CMakePresets.json",
         "ChibiOS/NETDUINO3_WIFI/CMakePresets.json",
