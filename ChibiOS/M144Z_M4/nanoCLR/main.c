@@ -77,6 +77,9 @@ int main(void)
 
     while (true)
     {
-        osDelay(100);
+        palSetPad(GPIOF, GPIOF_LED_GREEN);
+        osDelay(500);
+        palClearPad(GPIOF, GPIOF_LED_GREEN);
+        osDelay(500);
     }
 }

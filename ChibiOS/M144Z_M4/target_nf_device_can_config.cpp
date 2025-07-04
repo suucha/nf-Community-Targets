@@ -18,13 +18,13 @@
 // RX pin: is GPIOB_08
 // GPIO alternate pin function is 9 (see "Table 9. STM32F405xx and STM32F407xx alternate function mapping" in
 // STM32F405xx/STM32F407xx datasheet)
-CAN_CONFIG_PINS(1, GPIOB, GPIOB, 9, 8, 9)
+// CAN_CONFIG_PINS(1, GPIOB, GPIOB, 9, 8, 9)
 
 // buffer
-CANRxFrame Can1_MsgBuffer[CAN1_RX_BUFFER_SIZE];
+// CANRxFrame Can1_MsgBuffer[CAN1_RX_BUFFER_SIZE];
 
 // initialization for CAN1
-CAN_INIT(1, CAN1_RX_BUFFER_SIZE)
+// CAN_INIT(1, CAN1_RX_BUFFER_SIZE)
 
 ///////////
 // CAN2 //
@@ -37,10 +37,10 @@ CAN_INIT(1, CAN1_RX_BUFFER_SIZE)
 // RX pin: is GPIOB_05
 // GPIO alternate pin function is 9 (see "Table 9. STM32F405xx and STM32F407xx alternate function mapping" in
 // STM32F405xx/STM32F407xx datasheet)
-CAN_CONFIG_PINS(2, GPIOB, GPIOB, 6, 5, 9)
+// CAN_CONFIG_PINS(2, GPIOB, GPIOB, 6, 5, 9)
 
 // buffer
-CANRxFrame Can2_MsgBuffer[CAN2_RX_BUFFER_SIZE];
+// CANRxFrame Can2_MsgBuffer[CAN2_RX_BUFFER_SIZE];
 
 // initialization for CAN1
-CAN_INIT(2, CAN2_RX_BUFFER_SIZE)
+// CAN_INIT(2, CAN2_RX_BUFFER_SIZE)

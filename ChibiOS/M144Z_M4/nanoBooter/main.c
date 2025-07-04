@@ -41,7 +41,7 @@ int main(void)
 
     // if the USER button (blue one) is pressed, skip the check for a valid CLR image and remain in booter
     // the user button in this board has a pull-up resistor so the check has to be inverted
-    if (!palReadPad(GPIOA, GPIOA_BUTTON))
+    if (!palReadPad(GPIOA, GPIOA_WK_UP))
     {
         // check for valid CLR image
         // this target DOES NOT have configuration block, so we need to use the __nanoImage_end__ address here
@@ -84,9 +84,9 @@ int main(void)
     //  Normal main() thread
     while (true)
     {
-        palSetPad(GPIOD, GPIOD_LED3);
+        palSetPad(GPIOF, GPIOF_LED_RED);
         osDelay(500);
-        palClearPad(GPIOD, GPIOD_LED3);
+        palClearPad(GPIOF, GPIOF_LED_RED);
         osDelay(500);
     }
 }

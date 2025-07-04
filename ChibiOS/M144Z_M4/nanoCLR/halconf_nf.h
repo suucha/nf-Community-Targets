@@ -11,4 +11,6 @@
 #define HAL_NF_USE_STM32_FLASH         TRUE
 #endif
 
+
+
 #endif // HALCONF_NF_H
