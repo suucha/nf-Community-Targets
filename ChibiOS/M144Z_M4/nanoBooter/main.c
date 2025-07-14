@@ -41,17 +41,19 @@ int main(void)
 
     // if the USER button (blue one) is pressed, skip the check for a valid CLR image and remain in booter
     // the user button in this board has a pull-up resistor so the check has to be inverted
-    if (!palReadPad(GPIOA, GPIOA_WK_UP))
-    {
+    //if (palReadPad(GPIOA, GPIOA_WK_UP))
+    //{
         // check for valid CLR image
         // this target DOES NOT have configuration block, so we need to use the __nanoImage_end__ address here
+        palClearPad(GPIOF, GPIOF_LED_GREEN);
         if (CheckValidCLRImage((uint32_t)&__nanoImage_end__))
         {
+            palSetPad(GPIOF, GPIOF_LED_GREEN);
             // there seems to be a valid CLR image
             // launch nanoCLR
             LaunchCLR((uint32_t)&__nanoImage_end__);
         }
-    }
+    //}
 
 #if (HAL_NF_USE_STM32_CRC == TRUE)
     // startup crc
@@ -85,8 +87,8 @@ int main(void)
     while (true)
     {
         palSetPad(GPIOF, GPIOF_LED_RED);
-        osDelay(500);
+        osDelay(1500);
         palClearPad(GPIOF, GPIOF_LED_RED);
-        osDelay(500);
+        osDelay(1500);
     }
 }

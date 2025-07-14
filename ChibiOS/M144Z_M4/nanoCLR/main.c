@@ -47,6 +47,10 @@ int main(void)
     crcStart(NULL);
 #endif
 
+    // config and init external memory
+    // this has to be called after osKernelInitialize, otherwise an hard fault will occur
+    Target_ExternalMemoryInit();
+    
     //  Initializes a serial-over-USB CDC driver.
     sduObjectInit(&SERIAL_DRIVER);
     sduStart(&SERIAL_DRIVER, &serusbcfg);
@@ -77,9 +81,9 @@ int main(void)
 
     while (true)
     {
-        palSetPad(GPIOF, GPIOF_LED_GREEN);
-        osDelay(500);
-        palClearPad(GPIOF, GPIOF_LED_GREEN);
-        osDelay(500);
+        palSetPad(GPIOF, GPIOF_LED_RED);
+        osDelay(100);
+        palClearPad(GPIOF, GPIOF_LED_RED);
+        osDelay(100);
     }
 }

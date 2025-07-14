@@ -31,6 +31,7 @@ MEMORY
     ram5       (wx) : org = 0x40024000, len = 4k                  /* BCKP SRAM */
     ram6       (wx) : org = 0x00000000, len = 0
     ram7       (wx) : org = 0x00000000, len = 0
+    ext_ram    (wx) : org = 0x68000000, len = 1M      /* external SDRAM */   
     bootclpbrd (wx) : org = 0x20000000, len = 48      /* boot clipboard area */
 }
 
@@ -79,7 +80,7 @@ REGION_ALIAS("BSS_RAM", ram0);
 REGION_ALIAS("HEAP_RAM", ram4);
 
 /* RAM region to be used for the nanoFramework CLR managed heap.*/
-REGION_ALIAS("CLR_MANAGED_HEAP_RAM", ram0);
+REGION_ALIAS("CLR_MANAGED_HEAP_RAM", ext_ram);
 
 /* RAM region to be used for the boot clipboard.*/
 REGION_ALIAS("SECTION_FOR_BOOTCLIPBOARD", bootclpbrd);

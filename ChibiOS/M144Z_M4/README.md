@@ -8,7 +8,7 @@ The board used in this community contribution is the STM32F4DISCOVERY board from
 
 Some basic information abstracted from ST:
 
-- STM32F407VGT6 microcontroller featuring 32-bit ARM®Cortex®-M4 with FPU core, 1-Mbyte Flash memory, 192-kbyte RAM in an LQFP100 package
+- STM32F407ZGT6 microcontroller featuring 32-bit ARM®Cortex®-M4 with FPU core, 1-Mbyte Flash memory, 192-kbyte RAM in an LQFP144 package
 - On-board ST-LINK/V2 on STM32F4DISCOVERY (old reference) or ST-LINK/V2-A on STM32F407G-DISC1 (new order code)
 - USB ST-LINK with re-enumeration capability and three different interfaces:
   - Debug port

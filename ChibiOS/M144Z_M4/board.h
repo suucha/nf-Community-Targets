@@ -402,7 +402,7 @@
                                      PIN_PUPDR_FLOATING(GPIOA_SWDIO) |      \
                                      PIN_PUPDR_FLOATING(GPIOA_SWCLK) |      \
                                      PIN_PUPDR_PULLUP(GPIOA_PIN15))
-#define VAL_GPIOA_ODR               (PIN_ODR_HIGH(GPIOA_WK_UP) |            \
+#define VAL_GPIOA_ODR               (PIN_ODR_LOW(GPIOA_WK_UP) |            \
                                      PIN_ODR_LOW(GPIOA_PIN1) |              \
                                      PIN_ODR_HIGH(GPIOA_USART2_TX) |        \
                                      PIN_ODR_HIGH(GPIOA_USART2_RX) |        \
